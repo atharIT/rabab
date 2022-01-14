@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head lang=en>
+		<meta charset="utf-8" />
+		<title>
+			Monga
+			{% block title_block %}
+			{% endblock title_block %}
+		</title>
+	</head>
+
+	<body>
+		<div>
+			<ul>
+
+				{% if user.is_authenticated %}
+					<li> <a href="{% url 'authentications:index'%}"> home </a> </li>
+					<li> <a href="{% url 'authentications:logout' %}"> Logout </a> </li>
+				{% else %}
+					<li> <a href="{% url 'authentications:register' %}"> Sign up </a> </li>
+					<li> <a href="{% url 'authentications:log' %}"> Login </a> </li>
+
+				{% endif %}
+			</ul>
+		</div>
+		<hr />
+
+		<!-- body block  -->
+		<!-- substitute this block as you need per page -->
+		<div>
+			{% block body_block %}
+			{% endblock body_block %}
+		</div>
+		<hr />
+		<!-- body block ends -->
+
+<a href=""> forget pasword</a>
+
+	</body>
+</html>

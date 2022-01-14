@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Account-Loved One </title>
+  
+</head>
+<body>
+
+   <div class="container">
+      <div class="navbar">
+
+           <nav>
+             <ul id="MenuItems">
+               <li><a href="{% url 'authentications:index'  %}">Home</a></li>
+               <li><a href="{% url 'authentications:index'  %}">Products</a></li>
+               <li><a href="{% url 'authentications:index'  %}">Account</a></li>
+               <li><a href="">About</a></li>
+               <li><a href="{% url 'authentications:index'  %}">Contact</a></li>
+            </ul>
+          </nav>
+
+       </div>
+
+ </div>
+<!------login & register------>
+<div class="account-page">
+    <div class="container">
+        <div class="row">
+
+            <div class="col6">
+                <div class="form-container">
+                    <div class="form-btn">
+                        <span id="login">Login</span>
+                          <span>Register</span>
+
+                        <hr id="indicator">
+                    </div>
+                    <form id="login_form" method="post" action="{% url 'authentications:log' %}">
+                        {% csrf_token %}
+                         <input type="text" name="email" />
+                         <input type="password" name="password"/>
+                        <button type="Submit" class="btn">Login</button>
+
+                        <a href=" ">Forget Password</a>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+<div class="container">
+  <div class="row">
+    <div class="footer-col1">
+      <h3>Download Our App</h3>
+      <p>Download App for Android and iOS Mobile Phone</p>
+<div class="app-logo">
+
+</div>
+    </div>
+    <div class="footer-col2">
+
+       <p> Our Purpose Is To Sustainably Make Our Customers Happy and Satisfied </p>
+    </div>
+   <div class="footer-col3">
+       <h3>Useful Links</h3>
+       <ul>
+        <li>Coupons</li>
+        <li>Return Policy</li>
+       </ul>
+   </div>
+   <div class="footer-col4">
+      <h3>Follow us</h3>
+       <ul>
+          <li>Facebook</li>
+          <li>Instagram</li>
+          <li>Twitter</li>
+       </ul>
+   </div>
+  </div>
+<hr>
+<p class="copyright">Copyrights &#169 2021-Designer Afnan</p>
+</div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+<h1> Register </h1>
+	<form id="form" method="post" action="{% url 'authentications:register1' %}" enctype="multipart/form-data">
+		{% csrf_token %}
+
+
+		{% for field in form%}
+			<div>
+				{{ field.errors }}
+				{{ field.label_tag }} {{ field }}
+				<p> {{ field.help_text }} </p>
+			</div>
+		{% endfor %}
+
+
+		<input type="submit" name="submit" value="Sign Up">
+	</form>
